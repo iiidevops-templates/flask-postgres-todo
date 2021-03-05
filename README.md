@@ -1,4 +1,4 @@
-## Flask todo sqlite
+## Flask todo postgres
 
 ## 範例教學來源
 https://youtu.be/yKHJsLUENl0
