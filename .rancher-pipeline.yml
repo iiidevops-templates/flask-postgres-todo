@@ -47,13 +47,13 @@ stages:
       name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-db
       targetNamespace: ${CICD_GIT_REPO_NAME}
       answers:
-        db.type: mariadb
+        db.type: postgresql
         # Always true in this time
         db.gui: true
         db.username: iiidevops
         db.password: templatePassword
-        db.name: login
-        db.tag: 10.5
+        db.name: todo
+        db.tag: 11-debian-10
         # Common project info
         git.url: ${CICD_GIT_URL}
         git.repoName: ${CICD_GIT_REPO_NAME}
@@ -107,7 +107,7 @@ stages:
         db.releaseName: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-db
         db.username: iiidevops
         db.password: templatePassword
-        db.name: login
+        db.name: todo
     when:
       branch:
         include:
