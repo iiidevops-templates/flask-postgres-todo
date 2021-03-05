@@ -13,7 +13,7 @@ DB_USERNAME = os.getenv('db_username')
 DB_PASSWORD = os.getenv('db_password')
 DB_NAME = os.getenv('db_name')
 DB_HOST = os.getenv('db_host')
-DB_URL = 'mysql://{DB_USERNAME}:{DB_PASSWORD}@{DB_HOST}/{DB_NAME}'.format(DB_USERNAME=DB_USERNAME, DB_PASSWORD=DB_PASSWORD, DB_NAME=DB_NAME, DB_HOST=DB_HOST)
+DB_URL = 'postgresql://{DB_USERNAME}:{DB_PASSWORD}@{DB_HOST}/{DB_NAME}'.format(DB_USERNAME=DB_USERNAME, DB_PASSWORD=DB_PASSWORD, DB_NAME=DB_NAME, DB_HOST=DB_HOST)
 
 # sqlite資料庫設定
 # /// = 相對路徑relative path, //// = 絕對路徑absolute path

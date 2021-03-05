@@ -1,6 +1,7 @@
 FROM python:3.8
 
-RUN pip install Flask Flask-SQLAlchemy mysqlclient
+RUN apt update && apt-get install -y libpq-dev
+RUN pip install Flask Flask-SQLAlchemy psycopg2
 
 COPY app /app
 WORKDIR /app

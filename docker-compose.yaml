@@ -10,24 +10,19 @@ services:
       - db
     environment:
       db_name: todo
-      db_username: root
+      db_username: postgres
       db_password: IIIdevops123!
       db_host: db
     ports:
       - 5000
   db:
-    image: bitnami/mariadb:10.5
+    image: bitnami/postgresql:11-debian-10
     restart: always
     environment:
-      MARIADB_DATABASE: todo
-      MARIADB_ROOT_PASSWORD: IIIdevops123!
+      POSTGRESQL_DATABASE: todo
+      POSTGRESQL_PASSWORD: IIIdevops123!
     volumes:
       - ./db:/docker-entrypoint-initdb.d:rw
-    healthcheck:
-      test: ['CMD', '/opt/bitnami/scripts/mariadb/healthcheck.sh']
-      interval: 15s
-      timeout: 5s
-      retries: 6
   adminer:
     image: adminer
     restart: always

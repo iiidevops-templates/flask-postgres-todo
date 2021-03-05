@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Django Todo Postman Test" tests="1" time="0.133">
-  <testsuite name="index" id="b917d64a-b5ad-4458-b10f-e892224eb524" timestamp="2021-03-05T06:31:37.933Z" tests="2" failures="0" errors="0" time="0.133">
-    <testcase name="Response time is less than 800ms" time="0.133" classname="DjangoTodoPostmanTest"/>
-    <testcase name="Status code is 200" time="0.133" classname="DjangoTodoPostmanTest"/>
+<testsuites name="Django Todo Postman Test" tests="1" time="0.130">
+  <testsuite name="index" id="a4dc058f-e0c3-4040-be56-50ffd1d7b1ad" timestamp="2021-03-05T06:48:05.477Z" tests="2" failures="0" errors="0" time="0.130">
+    <testcase name="Response time is less than 800ms" time="0.130" classname="DjangoTodoPostmanTest"/>
+    <testcase name="Status code is 200" time="0.130" classname="DjangoTodoPostmanTest"/>
   </testsuite>
 </testsuites>
