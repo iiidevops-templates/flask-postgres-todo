@@ -1,6 +1,6 @@
 {
-  "name": "Flask Mariadb 10.5 - todo",
-  "description": "Flask / Mariadb: 10.5 <a href='https://github.com/iiidevops-templates/flask-mariadb-todo/blob/master/README.md'>Todo範本說明</a>",
+  "name": "Flask Postgres 11 - todo",
+  "description": "Flask / Postgres: 11 <a class='el-link el-link--primary' href='https://github.com/iiidevops-templates/flask-postgres-todo/blob/master/README.md'>Todo範本說明</a>",
   "arguments": [
     {
       "key": "db.username",
