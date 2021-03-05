@@ -3,7 +3,7 @@
 ## 範例教學來源
 https://youtu.be/yKHJsLUENl0
 
-## (local)本地環境隔離快速專案部屬(隨機PORT) + Postman-collection(newman)自動測試
+## (local)本地環境隔離快速專案部屬(隨機PORT) + 本地環境Postman-collection(newman)自動測試
 需安裝Docker, 若在Linux環境需額外手動安裝docker-compose, 部屬結果與UI相同
 ``` 
 docker-compose up -d --build 
@@ -29,6 +29,11 @@ docker-compose up -d --build
 `db_username`: 指向到您的資料庫使用者名稱
 `db_password`: 指向到您的資料庫密碼
 ```
+
+## iiidevops
+* 專案內`.rancher-pipeline.yml`請勿更動，產品系統設計上不支援pipeline修改
+* `iiidevops`資料夾內`pipeline_settings.json`請勿更動
+* `postman`資料夾內則是您在devops管理網頁上的Postman-collection(newman)自動測試檔案，devops系統會以`postman`資料夾內檔案做自動測試
 
 ## reference
 https://www.python-engineer.com/posts/flask-todo-app/
