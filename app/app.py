@@ -3,12 +3,21 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 # template資料夾內的網頁來顯示
 from flask import Flask, render_template, request, redirect, url_for
+# os
+import os
 
 app = Flask(__name__)
 
+# 讀取資料庫連線參數
+DB_USERNAME = os.getenv('db_username')
+DB_PASSWORD = os.getenv('db_password')
+DB_NAME = os.getenv('db_name')
+DB_HOST = os.getenv('db_host')
+DB_URL = 'mysql://{DB_USERNAME}:{DB_PASSWORD}@{DB_HOST}/{DB_NAME}'.format(DB_USERNAME=DB_USERNAME, DB_PASSWORD=DB_PASSWORD, DB_NAME=DB_NAME, DB_HOST=DB_HOST)
+
 # sqlite資料庫設定
 # /// = 相對路徑relative path, //// = 絕對路徑absolute path
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
+app.config['SQLALCHEMY_DATABASE_URI'] = DB_URL
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 

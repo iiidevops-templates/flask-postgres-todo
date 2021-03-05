@@ -6,5 +6,25 @@ services:
       context: ./
       dockerfile: Dockerfile.local
     restart: always
+    depends_on:
+      - db
+    environment:
+      db_name: todo
+      db_username: root
+      db_password: IIIdevops123!
+      db_host: db
     ports:
       - 5000
+  db:
+    image: bitnami/mariadb:10.5
+    restart: always
+    environment:
+      MARIADB_DATABASE: todo
+      MARIADB_ROOT_PASSWORD: IIIdevops123!
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d:rw
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080

@@ -1,6 +1,6 @@
 FROM python:3.8
 
-RUN pip install Flask Flask-SQLAlchemy
+RUN pip install Flask Flask-SQLAlchemy mysqlclient
 
 COPY app /app
 WORKDIR /app
