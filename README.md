@@ -40,6 +40,7 @@ ENV 環境變數名稱1 值1
 ENV 環境變數名稱2 值2
 ENV 環境變數名稱3 值3
 ```
+3. 由於目前系統pipeline限制，因此寫的服務請一定要在port `5000`
 
 ## iiidevops
 * 專案內`.rancher-pipeline.yml`請勿更動，產品系統設計上不支援pipeline修改
