@@ -1,6 +1,6 @@
 {
   "name": "Flask Postgres 11 - todo",
-  "description": "Flask / Postgres: 11 <a class='el-link el-link--primary' href='https://github.com/iiidevops-templates/flask-postgres-todo/blob/master/README.md'>Todo範本說明</a>",
+  "description": "Flask / Postgres: 11 <a class='el-link el-link--primary' href='https://github.com/iiidevops-templates/flask-postgres-todo/blob/master/README.md' target='_blank'>Todo範本說明</a>",
   "arguments": [
     {
       "key": "db.username",
