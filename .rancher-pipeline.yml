@@ -178,6 +178,23 @@ stages:
       catalogTemplate: cattle-global-data:iii-dev-charts3-test-postman
       name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-pm
       targetNamespace: ${CICD_GIT_REPO_NAME}
+      version: 0.2.0
+  when:
+    branch:
+      include:
+      - master
+- name: Test--WebInspect
+  steps:
+  - applyAppConfig:
+      answers:
+        git.branch: ${CICD_GIT_BRANCH}
+        git.commitID: ${CICD_GIT_COMMIT}
+        git.repoName: ${CICD_GIT_REPO_NAME}
+        git.url: ${CICD_GIT_URL}
+        pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
+      catalogTemplate: cattle-global-data:iii-dev-charts3-test-webinspect
+      name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-wi
+      targetNamespace: ${CICD_GIT_REPO_NAME}
       version: 0.1.0
   when:
     branch:
@@ -202,7 +219,7 @@ stages:
     branch:
       include:
       - master
-- name: Test Sideex Runner
+- name: Test--SideeX
   steps:
   - applyAppConfig:
       answers:
@@ -221,4 +238,3 @@ stages:
     branch:
       include:
       - master
-      - sideex
