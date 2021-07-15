@@ -31,6 +31,13 @@ class Todo(db.Model):
 def home():
     todo_list = Todo.query.all()
     return render_template("base.html", todo_list=todo_list)
+    
+    
+## GET畫面(Semantic UI漂亮的網頁)
+@app.route("/get/<int:todo_id>")
+def get():
+    todo_list = Todo.query.all()
+    return render_template("base.html", todo_list=todo_list)
 
 ## 新增Todo事項 
 @app.route("/add", methods=["POST"])
