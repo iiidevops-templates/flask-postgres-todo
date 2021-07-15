@@ -7,7 +7,7 @@ from flask import Flask, render_template, request, redirect, url_for
 import os
 
 app = Flask(__name__)
-
+# Version 2
 # 讀取資料庫連線參數
 DB_USERNAME = os.getenv('db_username')
 DB_PASSWORD = os.getenv('db_password')
