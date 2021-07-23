@@ -11,10 +11,7 @@ CREATE TABLE "public"."todo" (
     CONSTRAINT "todo_pkey" PRIMARY KEY ("id")
 ) WITH (oids = false);
 
-INSERT INTO "todo" ("id", "title", "complete") VALUES
-(1,	'cccccccccccccccc',	'0'),
-(2,	'asdddddddd',	'1'),
-(4,	'asdddddddddddd',	'0'),
-(3,	'計畫工讀生',	'1');
+INSERT INTO "todo" ("title", "complete") VALUES
+('計畫工讀生',	'1');
 
 -- 2021-03-05 09:12:13.712878+00
