@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, render_template, request, redirect, url_for
 # os
 import os
-
+# Test
 app = Flask(__name__)
 # Version 2
 # 讀取資料庫連線參數
