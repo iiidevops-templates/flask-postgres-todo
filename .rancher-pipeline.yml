@@ -210,7 +210,7 @@ stages:
   when:
     branch:
       include:
-      - master
+      - skip
 - iiidevops: postman
   name: Test--Postman
   steps:
