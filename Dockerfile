@@ -1,7 +1,7 @@
 FROM dockerhub/library/python:3.8
 
 RUN apt update && apt-get install -y libpq-dev
-RUN pip install Flask==2.0.3 Flask-SQLAlchemy==2.4.4 psycopg2==2.8.6 Jinja2==3.0.3
+RUN pip install Flask==2.0.3 Flask-SQLAlchemy==2.4.4 psycopg2==2.8.6 Jinja2==3.0.3 Werkzeug==2.0.3
 
 COPY app /app
 WORKDIR /app
