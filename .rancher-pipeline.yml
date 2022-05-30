@@ -30,7 +30,6 @@ stages:
   when:
     branch:
       include:
-      - master
       - develop
 - name: Test--Checkmarx source code scan
   iiidevops: checkmarx
@@ -77,6 +76,7 @@ stages:
       include:
       - skip-master
       - develop
+      - master
 - name: Deploy--Wait DB deployment
   iiidevops: deployed-environments
   steps:
@@ -100,6 +100,7 @@ stages:
       include:
       - skip-master
       - develop
+      - master
 - name: Deploy--Set Web environment variables
   iiidevops: deployed-environments
   steps:
@@ -125,6 +126,7 @@ stages:
       include:
       - skip-master
       - develop
+      - master
 - name: Build--Build and push docker image
   iiidevops: deployed-environments
   steps:
@@ -145,6 +147,7 @@ stages:
       include:
       - skip-master
       - develop
+      - master
 - name: Build--Scan docker image
   iiidevops: deployed-environments
   steps:
@@ -161,6 +164,7 @@ stages:
       include:
       - skip-master
       - develop
+      - master
 - name: Deploy--Web including DB config
   iiidevops: deployed-environments
   steps:
@@ -190,6 +194,7 @@ stages:
       include:
       - skip-master
       - develop
+      - master
 - name: Deploy--Wait Web deployment
   iiidevops: deployed-environments
   steps:
@@ -213,6 +218,7 @@ stages:
       include:
       - skip-master
       - develop
+      - master
 - name: Test--ZAP
   iiidevops: zap
   steps:
