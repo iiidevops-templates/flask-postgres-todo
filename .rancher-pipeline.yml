@@ -26,12 +26,12 @@ stages:
       catalogTemplate: cattle-global-data:iii-dev-charts3-scan-sonarqube
       name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-sq
       targetNamespace: ${CICD_GIT_REPO_NAME}
-      version: 0.2.4
+      version: 0.2.5
   when:
     branch:
       include:
-      - develop
       - master
+      - develop
 - name: Test--Checkmarx source code scan
   iiidevops: checkmarx
   steps:
@@ -51,8 +51,6 @@ stages:
     branch:
       include:
       - skip-master
-      - develop
-      - master
 - name: Deploy--DB
   iiidevops: deployed-environments
   steps:
@@ -77,8 +75,6 @@ stages:
     branch:
       include:
       - skip-master
-      - develop
-      - master
 - name: Deploy--Wait DB deployment
   iiidevops: deployed-environments
   steps:
@@ -101,8 +97,6 @@ stages:
     branch:
       include:
       - skip-master
-      - develop
-      - master
 - name: Deploy--Set Web environment variables
   iiidevops: deployed-environments
   steps:
@@ -127,8 +121,6 @@ stages:
     branch:
       include:
       - skip-master
-      - develop
-      - master
 - name: Build--Build and push docker image
   iiidevops: deployed-environments
   steps:
@@ -148,8 +140,6 @@ stages:
     branch:
       include:
       - skip-master
-      - develop
-      - master
 - name: Build--Scan docker image
   iiidevops: deployed-environments
   steps:
@@ -165,8 +155,6 @@ stages:
     branch:
       include:
       - skip-master
-      - develop
-      - master
 - name: Deploy--Web including DB config
   iiidevops: deployed-environments
   steps:
@@ -195,8 +183,6 @@ stages:
     branch:
       include:
       - skip-master
-      - develop
-      - master
 - name: Deploy--Wait Web deployment
   iiidevops: deployed-environments
   steps:
@@ -219,8 +205,6 @@ stages:
     branch:
       include:
       - skip-master
-      - develop
-      - master
 - name: Test--ZAP
   iiidevops: zap
   steps:
@@ -242,8 +226,6 @@ stages:
     branch:
       include:
       - skip-master
-      - develop
-      - master
 - name: Test--WebInspect
   iiidevops: webinspect
   steps:
@@ -285,8 +267,6 @@ stages:
     branch:
       include:
       - skip-master
-      - develop
-      - master
 - name: Test--SideeX
   iiidevops: sideex
   steps:
@@ -308,5 +288,3 @@ stages:
     branch:
       include:
       - skip-master
-      - develop
-      - master
